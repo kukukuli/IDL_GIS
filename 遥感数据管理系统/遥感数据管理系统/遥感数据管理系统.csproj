@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{21C0CD77-1187-42B6-998A-774C26DC8FAA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>遥感数据管理系统</RootNamespace>
+    <AssemblyName>遥感数据管理系统</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.3DAnalyst, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AxControls, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataManagementTools, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesRaster, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessing, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessor, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GlobeCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Output, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Version, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1 0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1 0.Designer.cs">
+      <DependentUpon>Form1 0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Clip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Clip.Designer.cs">
+      <DependentUpon>Form_Clip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CompositeBands.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_CompositeBands.Designer.cs">
+      <DependentUpon>Form_CompositeBands.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Moasic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Moasic.Designer.cs">
+      <DependentUpon>Form_Moasic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pansharpen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Pansharpen.Designer.cs">
+      <DependentUpon>Form_Pansharpen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Resample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Resample.Designer.cs">
+      <DependentUpon>Form_Resample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_SaveAs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_SaveAs.Designer.cs">
+      <DependentUpon>Form_SaveAs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IDL_AR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IDL_AR.Designer.cs">
+      <DependentUpon>IDL_AR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IDL_boduantiqv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IDL_boduantiqv.Designer.cs">
+      <DependentUpon>IDL_boduantiqv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IDL_julei.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IDL_julei.Designer.cs">
+      <DependentUpon>IDL_julei.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IDL_NDVI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IDL_NDVI.Designer.cs">
+      <DependentUpon>IDL_NDVI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IDL_RC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IDL_RC.Designer.cs">
+      <DependentUpon>IDL_RC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IDL_sanboduanronghe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IDL_sanboduanronghe.Designer.cs">
+      <DependentUpon>IDL_sanboduanronghe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IDL_VCI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IDL_VCI.Designer.cs">
+      <DependentUpon>IDL_VCI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="shuxingbiao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="shuxingbiao.Designer.cs">
+      <DependentUpon>shuxingbiao.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1 0.resx">
+      <DependentUpon>Form1 0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Clip.resx">
+      <DependentUpon>Form_Clip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_CompositeBands.resx">
+      <DependentUpon>Form_CompositeBands.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Moasic.resx">
+      <DependentUpon>Form_Moasic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Pansharpen.resx">
+      <DependentUpon>Form_Pansharpen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Resample.resx">
+      <DependentUpon>Form_Resample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_SaveAs.resx">
+      <DependentUpon>Form_SaveAs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IDL_AR.resx">
+      <DependentUpon>IDL_AR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IDL_boduantiqv.resx">
+      <DependentUpon>IDL_boduantiqv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IDL_julei.resx">
+      <DependentUpon>IDL_julei.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IDL_NDVI.resx">
+      <DependentUpon>IDL_NDVI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IDL_RC.resx">
+      <DependentUpon>IDL_RC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IDL_sanboduanronghe.resx">
+      <DependentUpon>IDL_sanboduanronghe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IDL_VCI.resx">
+      <DependentUpon>IDL_VCI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="shuxingbiao.resx">
+      <DependentUpon>shuxingbiao.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="COM_IDL_connectLib">
+      <Guid>{793842FC-D6A3-4AA8-84BA-939B23349E48}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="COM_IDL_connect_x86_64Lib">
+      <Guid>{B5519CFC-CCE0-46AC-994D-AFAD55266631}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

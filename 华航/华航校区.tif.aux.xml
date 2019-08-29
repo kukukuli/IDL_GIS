@@ -1,0 +1,6 @@
+<PAMDataset>
+  <SRS>PROJCS[&quot;WGS_1984_Web_Mercator&quot;,GEOGCS[&quot;GCS_WGS_1984_Major_Auxiliary_Sphere&quot;,DATUM[&quot;WGS_1984_Major_Auxiliary_Sphere&quot;,SPHEROID[&quot;WGS_1984_Major_Auxiliary_Sphere&quot;,6378137.0,0.0]],PRIMEM[&quot;Greenwich&quot;,0.0],UNIT[&quot;Degree&quot;,0.0174532925199433]],PROJECTION[&quot;Mercator_1SP&quot;],PARAMETER[&quot;False_Easting&quot;,0.0],PARAMETER[&quot;False_Northing&quot;,0.0],PARAMETER[&quot;Central_Meridian&quot;,0.0],PARAMETER[&quot;latitude_of_origin&quot;,0.0],UNIT[&quot;Meter&quot;,1.0]]</SRS>
+  <Metadata domain="Esri">
+    <MDI key="PyramidResamplingType">NEAREST</MDI>
+  </Metadata>
+</PAMDataset>
